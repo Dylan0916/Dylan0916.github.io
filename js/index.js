@@ -19,8 +19,8 @@ $(window).scroll(evt => {
   
   // 置頂箭頭 & 下滑指示箭頭
   $windowST <= 100
-    ? $(".goTop, .js-arrow").addClass("js-at_top")
-    : $(".goTop, .js-arrow").removeClass("js-at_top");
+    ? $(".goTop, .js-arrowDown").addClass("js-at_top")
+    : $(".goTop, .js-arrowDown").removeClass("js-at_top");
   
   // nav 加底線
   edu_offset = $('#edu').offset().top - header_height;
@@ -53,7 +53,7 @@ $('.navbar__brand, .goTop').click(() => {
 });
 
 // ID href
-$('.navbar__link, .js-arrow').click(() => {
+$('.navbar__link, .js-arrowDown').click(() => {
   let $this = $(event.currentTarget),
       href = $this.attr('href'),
       window_width = document.body.clientWidth;
@@ -62,8 +62,8 @@ $('.navbar__link, .js-arrow').click(() => {
     scrollTop: $(href).offset().top - ( header_height - ( (window_width < 768) ? 3 : 1 ) )
   }, 600);
   
-  // menu
- (window_width < 768 && !$this.hasClass('js-arrow')) ? menu_tggle() : '';
+  // menu 關閉用
+ (window_width < 768 && !$this.hasClass('js-arrowDown')) ? menu_tggle() : '';
 
   return false;
 });
@@ -71,6 +71,8 @@ $('.navbar__link, .js-arrow').click(() => {
 // menu toggle
 $('a.menu-toggle').click(() => {
   menu_tggle();
+
+  return false;
 });
   
 function menu_tggle() {
@@ -105,23 +107,23 @@ new WOW().init();
 let works_data = [
   {
     "url":"images/specialTopic-front.png",
-    "title":"Fun \u5fc3\u65c5\u904a",
-    "content":"\u9019\u662f\u6211\u5927\u5b78\u7684\u5c08\u984c\uff0c\u662f\u500b\u80fd\u8b93\u7279\u6b8a\u65cf\u7fa4\u51fa\u9580\u65c5\u904a\u80fd\u4e0d\u7528\u64d4\u5fc3\u53bb\u8655\u6709\u7121\u7121\u969c\u7919\u7a7a\u9593\u6216\u6551\u8b77\u8a2d\u5099\uff0c\u8b93\u65c5\u904a\u66f4\u5b89\u5fc3\u3002"
+    "title":"Fun 心旅遊",
+    "content":"這是我大學的專題，是個能讓特殊族群出門旅遊能不用擔心去處有無無障礙空間或救護設備，讓旅遊更安心。"
   },
   {
     "url":"images/ntunhs-usedboob-front.png",
-   "title":"\u5317\u8b77\u4e8c\u624b\u66f8\u4ea4\u6613\u5e73\u53f0",
+   "title":"北護二手書交易平台",
    "content":"一個提供給北護師生收購需用或販售不要的二手書的平台。"
   },
   {
     "url":"images/Tic-Tac-Toe-front.png",
    "title":"Tic Tac Toe",
-   "content":"\u5229\u7528 JavaScript \u88fd\u4f5c\u51fa\u96fb\u8166\u7248\u7db2\u9801\u73a9\u7684\u4e95\u5b57\u68cb (\u5708\u5708\u53c9\u53c9)\u3002"
+   "content":"利用 JavaScript 製作出電腦版網頁玩的井字棋 (圈圈叉叉)。"
   },
   {
     "url":"images/snake-game-front.png",
-   "title":"\u8caa\u98df\u86c7",
-   "content":"\u9019\u662f\u7528 JavaScript \u6240\u505a\u51fa\u7684\u8caa\u98df\u86c7\uff0c\u5229\u7528\u9375\u76e4\u4f86\u64cd\u63a7\u86c7\u7684\u79fb\u52d5\u3002"
+   "title":"貪食蛇",
+   "content":"這是用 JavaScript 所做出的貪食蛇，利用鍵盤來操控蛇的移動。"
   }
 ];
 

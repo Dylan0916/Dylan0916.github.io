@@ -551,10 +551,10 @@ hr {
   transform: translate(-50%, -50%) rotate(0);
   width: 130px;
   height: 130px;
-  background-image: url("../images/about.jpg");
+  background-image: url("../images/profile-thumbnail.jpg");
   background-size: cover;
   border-radius: 100%;
-  background-position: top center;
+  background-position: top;
   cursor: pointer;
   -webkit-transition: 0.7s;
   -o-transition: 0.7s;
@@ -667,7 +667,8 @@ hr {
     font-weight: 600; }
   .items__info .items__department {
     color: #333;
-    font-size: 15px; }
+    font-size: 15px;
+    margin-top: 3px; }
   .items__info .items__description {
     margin-top: 6px;
     color: #666;
