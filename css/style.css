@@ -211,7 +211,7 @@ hr {
   @media (max-width: 576px) {
     .box__cross {
       right: 10px;
-      margin-top: -50px; } }
+      margin-top: -52px; } }
   .box__cross:hover {
     -webkit-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
@@ -398,7 +398,7 @@ hr {
       height: 100%;
       background-color: #fefefe; }
       .navbar__nav ul {
-        margin-top: 50px; }
+        margin-top: 18vh; }
       .navbar__nav .navbar__item {
         display: block;
         text-align: center;
@@ -891,6 +891,10 @@ hr {
     -webkit-transform: rotate(360deg) scale(1.8);
     -ms-transform: rotate(360deg) scale(1.8);
     transform: rotate(360deg) scale(1.8); }
+  @media (max-width: 425px) {
+    .contact__logo a {
+      margin-left: 12px;
+      margin-right: 12px; } }
 
 /*-------------------------*/
 /* $Footer
