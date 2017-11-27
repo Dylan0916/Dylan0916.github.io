@@ -1,0 +1,46 @@
+/*!
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('font/fontawesome-webfont.eot?v=4.7.0');
+  src: url('font/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('font/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('font/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('font/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('font/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Deprecated as of 4.4.0 */
+.fa-chevron-up:before {
+  content: "\f077";
+}
+.fa-times:before {
+  content: "\f00d";
+}
+.fa-envelope-o:before {
+  content: "\f003";
+}
+.fa-github:before {
+  content: "\f09b";
+}
+.fa-angle-down:before {
+  content: "\f107";
+}
+.fa-circle-thin:before {
+  content: "\f1db";
+}
+.fa-facebook-square:before {
+  content: "\f082";
+}
+.fa-linkedin-square:before {
+  content: "\f08c";
+}

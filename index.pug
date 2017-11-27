@@ -1,0 +1,242 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title Dehoa Kong | CV
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='shortcut icon', href='images/favicon.ico', type='image/x-icon')
+    // Start vendor css
+    link(rel='stylesheet prefetch', href='vendor/bootstrap/bootstrap-4.0.0.css')
+    link(rel='stylesheet prefetch', href='vendor/font-awesome/font-awesome-4.7.0.css')
+    link(rel='stylesheet prefetch', href='https://fonts.googleapis.com/css?family=Lobster|Bree+Serif|Lemonada|Montserrat:300,400,500,600,700,900')
+    link(rel='stylesheet prefetch', href='vendor/owl-carousel/owl-carousel-2.2.1.min.css')
+    link(rel='stylesheet prefetch', href='vendor/animate/animate-3.5.1.css')
+    // End vendor css
+    link(rel='stylesheet', href='css/style.css')
+  body
+    .wrapper
+
+      // Start element
+      .bg
+      .goTop.js-at_top
+        i.fa.fa-chevron-up
+      // End element
+
+      // Start work box
+      #app2.box
+        .container
+          .box__cross(@click='close_box')
+          .box__inner(v-for='(box, id) in box_data', :id="'box_' + id")
+            .owl-carousel.owl-theme
+              .imgbox(v-for='box_img in box.img')
+                .imgbox__inner(:class="(id == 0) ? 'imgbox__inner--7-6' : 'imgbox__inner--5-4'")
+                  .image(:style='bg_css(box_img)')
+            .row
+              .box__info
+                .col-lg-8.push-lg-2
+                  h2.box__heading {{box.title}}
+                  .box__text(v-html='box.description')
+                  .box__icons
+                    i.box__icon.fa.fa-times(@click='close_box')
+      // End work box
+
+      // Start header
+      header.header.js-at_top
+        .container
+          .navbar.u-clearfix
+            a.navbar__brand(href='#!') Dehao Kong
+            a.menu-toggle(href='#navbarLink')
+              span
+              span
+            #navbarLink.nav.navbar__nav
+              ul
+                li.navbar__item
+                  a.navbar__link(href='#edu') Education
+                li.navbar__item
+                  a.navbar__link(href='#experience') Experience
+                li.navbar__item
+                  a.navbar__link(href='#skills') Skills
+                li.navbar__item
+                  a.navbar__link(href='#works') Works
+                li.navbar__item
+                  a.navbar__link(href='#contact') Contact
+      // End header
+
+      // Start main
+      section.main
+
+        // Start front cover
+        .front-cover
+          h1.front-cover__heading.wow.bounceInLeft My Design Experience.
+          a.front-cover__arrow-down.js-arrow.js-at_top(href='#about')
+            .arrow.fa.fa-angle-down
+        // End front cover
+
+        // Strart about
+        #about.about.bg-color--white.u-area-padding
+          .container
+            .row
+              .col-md-12
+                .title.wow.bounceInUp ABOUT ME
+            .row
+              .col-md-3.col-sm-12
+                .about__cover.wow.fadeIn(data-wow-delay='0.5s', data-wow-duration='2s')
+              .col-md-9.col-sm-12
+                .about__description.wow.bounceInUp(data-wow-delay='0.5s')
+                  | 您好！我叫孔德豪，畢業於國立臺北護理健康大學-資管系，熱愛程式，專長是網頁開發，擅長 
+                  span.u-text-important HTML、CSS、PHP、jQuery、Vue.js
+                  | 。
+                  br
+                  | 大三升大四的暑期中，為了瞭解自己與企業差距，而申請了期交所的實習生，在期交所的時間裡，瞭解到企業裡人們的應對方式，以及很多沒聽過的技術。大四開學後我馬不停蹄，申請了真茂公司實習，利用了不擅長的語言 C# 來製作出主管交代的網頁，中途查了不少資料與翻閱不少課本，最終完成了工作，確信自己有解決問題的能力。
+                  br
+                  | 畢業後靠網路上的資源，自學了 
+                  span.u-text-important Pug、SASS、
+                  | 以及 PHP 的框架
+                  span.u-text-important 「Laravel」
+                  | ，並寫出了一個二手書平台，為自己的經驗與作品更添一筆。
+        // End about
+
+        // Start education
+        #edu.edu.bg-color--white.u-area-padding
+          .container
+            .row
+              .col-sm-12
+                h2.title.wow.bounceInUp EDUCATION
+            .row.items.wow.fadeInUp(data-wow-delay='0.7s')
+              .col-md-3.col-sm-12.items__year
+                | 2012 - 2016
+                .circle.bg-color--white.fa.fa-circle-thin
+              .col-md-9.col-sm-12.items__info
+                .items__name 國立臺北護理健康大學
+                .items__department 資訊管理系
+                .items__description
+                  | 由於大陸漂移，現今北半球幾乎是被陸地和海洋平分（約2：3的比例），而南半球多是海洋 （約1：4.7的比例）。開闊海域的海水鹽分約為3.5%，不同的水域鹽分有所不同。
+            .row.items.wow.fadeInUp(data-wow-delay='1.0s')
+              .col-md-3.col-sm-12.items__year
+                | 2009 - 2012
+                .circle.bg-color--white.fa.fa-circle-thin
+              .col-md-9.col-sm-12.items__info
+                .items__name 桃園市育達高級中學
+                .items__department 資料處理科
+                .items__description
+                  | 由於大陸漂移，現今北半球幾乎是被陸地和海洋平分（約2：3的比例），而南半球多是海洋 （約1：4.7的比例）。開闊海域的海水鹽分約為3.5%，不同的水域鹽分有所不同。
+        // End education
+
+        // Start experience
+        #experience.experience.bg-color--grey.u-area-padding
+          .container
+            .row
+              .col-sm-12
+                h2.title.wow.bounceInUp EXPERIENCE
+            .row.items.wow.fadeInUp(data-wow-delay='0.7s')
+              .col-md-3.col-sm-12.items__year
+                | 2015 - 2016
+                .circle.bg-color--grey.fa.fa-circle-thin
+              .col-md-9.col-sm-12.items__info
+                .items__name 真茂科技公司
+                .items__department 實習生
+                .items__description
+                  | 由於大陸漂移，現今北半球幾乎是被陸地和海洋平分（約2：3的比例），而南半球多是海洋 （約1：4.7的比例）。開闊海域的海水鹽分約為3.5%，不同的水域鹽分有所不同。
+            .row.items.wow.fadeInUp(data-wow-delay='1.0s')
+              .col-md-3.col-sm-12.items__year
+                | 2015 - 2015
+                .circle.bg-color--grey.fa.fa-circle-thin
+              .col-md-9.col-sm-12.items__info
+                .items__name 臺灣期貨交易所
+                .items__department 暑期實習生
+                .items__description
+                  | 由於大陸漂移，現今北半球幾乎是被陸地和海洋平分（約2：3的比例），而南半球多是海洋 （約1：4.7的比例）。開闊海域的海水鹽分約為3.5%，不同的水域鹽分有所不同。
+        // End experience
+
+        // Start skill
+        #skills.skills.bg-color--white.u-area-padding
+          .container
+            .row
+              .col-sm-12
+                h2.title.wow.bounceInUp MY SKILLS
+            .row
+              .col-lg-2.col-md-4.col-sm-6
+                .skills-type.wow.rotateIn(data-wow-delay='0.4s')
+                  .skills-type__circle.c1
+                    .mask-grey
+                    .mask-blue
+                  .skills-type__text HTML5 / CSS3
+              .col-lg-2.col-md-4.col-sm-6
+                .skills-type.wow.rotateIn(data-wow-delay='0.7s')
+                  .skills-type__circle.c2
+                    .mask-grey
+                    .mask-blue
+                  .skills-type__text Bootstrap
+              .col-lg-2.col-md-4.col-sm-6
+                .skills-type.wow.rotateIn(data-wow-delay='1.0s')
+                  .skills-type__circle.c3
+                    .mask-grey
+                    .mask-blue
+                  .skills-type__text Vue.js
+              .col-lg-2.col-md-4.col-sm-6
+                .skills-type.wow.rotateIn(data-wow-delay='1.3s')
+                  .skills-type__circle.c4
+                    .mask-grey
+                    .mask-blue
+                  .skills-type__text JQuery / Sass
+              .col-lg-2.col-md-4.col-sm-6
+                .skills-type.wow.rotateIn(data-wow-delay='1.6s')
+                  .skills-type__circle.c5
+                    .mask-grey
+                    .mask-blue
+                  .skills-type__text PHP / MySQL
+              .col-lg-2.col-md-4.col-sm-6
+                .skills-type.wow.rotateIn(data-wow-delay='1.9s')
+                  .skills-type__circle.c6
+                    .mask-grey
+                    .mask-blue
+                  .skills-type__text Laravel
+        // End skill
+
+        // Start works
+        #works.works.bg-color--grey.u-area-padding
+          #app.container
+            .row
+              .col-sm-12
+                h1.title.wow.bounceInUp WORKS
+              .col-md-6.col-sm-12.works-group(v-for='(work, id) in works_data')
+                .work.wow.fadeInUp(@click='work_click(id)', :data-wow-delay="(id + 1) * 0.3 + 's'")
+                  img.work__cover(:src='work.url')
+                  .work-info
+                    .work-info__title {{work.title}}
+                    .work-info__content {{work.content}}
+        // End works
+
+        // Start contact
+        #contact.contact.bg-color--white
+          .container
+            .row
+              .col-md-12
+                .contact__title.wow.bounceInUp CONTACT
+                hr
+                .contact__mail.wow.fadeInUp(data-wow-delay='0.3s')
+                  a.fa.fa-envelope-o(href='mailto:klj40702@gmail.com')
+                    span klj40702@gmail.com
+                .contact__logo
+                  a.fa.fa-facebook-square.wow.rotateIn(href='https://fb.me/ke.di.54', target='_blank', data-wow-delay='0.4s')
+                  a.fa.fa-github.wow.rotateIn(href='https://github.com/RD0916', target='_blank', data-wow-delay='0.7s')
+                  a.fa.fa-linkedin-square.wow.rotateIn(href='linkedin.com/in/rd0916', target='_blank', data-wow-delay='1s')
+        // End contact
+
+      // End main
+
+      // Start footer
+      footer.footer
+        .container-fluid
+          .left-text D
+          .right-text
+            .copyright © 2017-2018 Dehao Kong. All rights reserved
+      // End footer
+    
+    // Start vendor js
+    script(src='vendor/jQuery/jquery-2.2.4.min.js')
+    script(src='vendor/vue/vue-2.3.4.min.js')
+    script(src='vendor/owl-carousel/owl-carousel-2.2.1.min.js')
+    script(src='vendor/wow/wow-1.1.2.min.js')
+    // End vendor js
+    script(src='js/index.js')

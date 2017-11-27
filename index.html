@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dehoa Kong | CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Start vendor css-->
+    <link rel="stylesheet prefetch" href="vendor/bootstrap/bootstrap-4.0.0.css">
+    <link rel="stylesheet prefetch" href="vendor/font-awesome/font-awesome-4.7.0.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Lobster|Bree+Serif|Lemonada|Montserrat:300,400,500,600,700,900">
+    <link rel="stylesheet prefetch" href="vendor/owl-carousel/owl-carousel-2.2.1.min.css">
+    <link rel="stylesheet prefetch" href="vendor/animate/animate-3.5.1.css">
+    <!-- End vendor css-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Start element-->
+      <div class="bg"></div>
+      <div class="goTop js-at_top"><i class="fa fa-chevron-up"></i></div>
+      <!-- End element-->
+      <!-- Start work box-->
+      <div class="box" id="app2">
+        <div class="container">
+          <div class="box__cross" @click="close_box"></div>
+          <div class="box__inner" v-for="(box, id) in box_data" :id="'box_' + id">
+            <div class="owl-carousel owl-theme">
+              <div class="imgbox" v-for="box_img in box.img">
+                <div class="imgbox__inner" :class="(id == 0) ? 'imgbox__inner--7-6' : 'imgbox__inner--5-4'">
+                  <div class="image" :style="bg_css(box_img)"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="box__info">
+                <div class="col-lg-8 push-lg-2">
+                  <h2 class="box__heading">{{box.title}}</h2>
+                  <div class="box__text" v-html="box.description"></div>
+                  <div class="box__icons"><i class="box__icon fa fa-times" @click="close_box"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End work box-->
+      <!-- Start header-->
+      <header class="header js-at_top">
+        <div class="container">
+          <div class="navbar u-clearfix"><a class="navbar__brand" href="#!">Dehao Kong</a><a class="menu-toggle" href="#navbarLink"><span></span><span></span></a>
+            <div class="nav navbar__nav" id="navbarLink">
+              <ul>
+                <li class="navbar__item"><a class="navbar__link" href="#edu">Education</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#experience">Experience</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#skills">Skills</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#works">Works</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- End header-->
+      <!-- Start main-->
+      <section class="main">
+        <!-- Start front cover-->
+        <div class="front-cover">
+          <h1 class="front-cover__heading wow bounceInLeft">My Design Experience.</h1><a class="front-cover__arrow-down js-arrow js-at_top" href="#about">
+            <div class="arrow fa fa-angle-down"></div></a>
+        </div>
+        <!-- End front cover-->
+        <!-- Strart about-->
+        <div class="about bg-color--white u-area-padding" id="about">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="title wow bounceInUp">ABOUT ME</div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 col-sm-12">
+                <div class="about__cover wow fadeIn" data-wow-delay="0.5s" data-wow-duration="2s"></div>
+              </div>
+              <div class="col-md-9 col-sm-12">
+                <div class="about__description wow bounceInUp" data-wow-delay="0.5s">您好！我叫孔德豪，畢業於國立臺北護理健康大學-資管系，熱愛程式，專長是網頁開發，擅長 <span class="u-text-important">HTML、CSS、PHP、jQuery、Vue.js</span>。<br>大三升大四的暑期中，為了瞭解自己與企業差距，而申請了期交所的實習生，在期交所的時間裡，瞭解到企業裡人們的應對方式，以及很多沒聽過的技術。大四開學後我馬不停蹄，申請了真茂公司實習，利用了不擅長的語言 C# 來製作出主管交代的網頁，中途查了不少資料與翻閱不少課本，最終完成了工作，確信自己有解決問題的能力。<br>畢業後靠網路上的資源，自學了 <span class="u-text-important">Pug、SASS、</span>以及 PHP 的框架<span class="u-text-important">「Laravel」</span>，並寫出了一個二手書平台，為自己的經驗與作品更添一筆。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End about-->
+        <!-- Start education-->
+        <div class="edu bg-color--white u-area-padding" id="edu">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="title wow bounceInUp">EDUCATION</h2>
+              </div>
+            </div>
+            <div class="row items wow fadeInUp" data-wow-delay="0.7s">
+              <div class="col-md-3 col-sm-12 items__year">2012 - 2016
+                <div class="circle bg-color--white fa fa-circle-thin"></div>
+              </div>
+              <div class="col-md-9 col-sm-12 items__info">
+                <div class="items__name">國立臺北護理健康大學</div>
+                <div class="items__department">資訊管理系</div>
+                <div class="items__description">由於大陸漂移，現今北半球幾乎是被陸地和海洋平分（約2：3的比例），而南半球多是海洋 （約1：4.7的比例）。開闊海域的海水鹽分約為3.5%，不同的水域鹽分有所不同。</div>
+              </div>
+            </div>
+            <div class="row items wow fadeInUp" data-wow-delay="1.0s">
+              <div class="col-md-3 col-sm-12 items__year">2009 - 2012
+                <div class="circle bg-color--white fa fa-circle-thin"></div>
+              </div>
+              <div class="col-md-9 col-sm-12 items__info">
+                <div class="items__name">桃園市育達高級中學</div>
+                <div class="items__department">資料處理科</div>
+                <div class="items__description">由於大陸漂移，現今北半球幾乎是被陸地和海洋平分（約2：3的比例），而南半球多是海洋 （約1：4.7的比例）。開闊海域的海水鹽分約為3.5%，不同的水域鹽分有所不同。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End education-->
+        <!-- Start experience-->
+        <div class="experience bg-color--grey u-area-padding" id="experience">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="title wow bounceInUp">EXPERIENCE</h2>
+              </div>
+            </div>
+            <div class="row items wow fadeInUp" data-wow-delay="0.7s">
+              <div class="col-md-3 col-sm-12 items__year">2015 - 2016
+                <div class="circle bg-color--grey fa fa-circle-thin"></div>
+              </div>
+              <div class="col-md-9 col-sm-12 items__info">
+                <div class="items__name">真茂科技公司</div>
+                <div class="items__department">實習生</div>
+                <div class="items__description">由於大陸漂移，現今北半球幾乎是被陸地和海洋平分（約2：3的比例），而南半球多是海洋 （約1：4.7的比例）。開闊海域的海水鹽分約為3.5%，不同的水域鹽分有所不同。</div>
+              </div>
+            </div>
+            <div class="row items wow fadeInUp" data-wow-delay="1.0s">
+              <div class="col-md-3 col-sm-12 items__year">2015 - 2015
+                <div class="circle bg-color--grey fa fa-circle-thin"></div>
+              </div>
+              <div class="col-md-9 col-sm-12 items__info">
+                <div class="items__name">臺灣期貨交易所</div>
+                <div class="items__department">暑期實習生</div>
+                <div class="items__description">由於大陸漂移，現今北半球幾乎是被陸地和海洋平分（約2：3的比例），而南半球多是海洋 （約1：4.7的比例）。開闊海域的海水鹽分約為3.5%，不同的水域鹽分有所不同。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End experience-->
+        <!-- Start skill-->
+        <div class="skills bg-color--white u-area-padding" id="skills">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h2 class="title wow bounceInUp">MY SKILLS</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="skills-type wow rotateIn" data-wow-delay="0.4s">
+                  <div class="skills-type__circle c1">
+                    <div class="mask-grey"></div>
+                    <div class="mask-blue"></div>
+                  </div>
+                  <div class="skills-type__text">HTML5 / CSS3</div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="skills-type wow rotateIn" data-wow-delay="0.7s">
+                  <div class="skills-type__circle c2">
+                    <div class="mask-grey"></div>
+                    <div class="mask-blue"></div>
+                  </div>
+                  <div class="skills-type__text">Bootstrap</div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="skills-type wow rotateIn" data-wow-delay="1.0s">
+                  <div class="skills-type__circle c3">
+                    <div class="mask-grey"></div>
+                    <div class="mask-blue"></div>
+                  </div>
+                  <div class="skills-type__text">Vue.js</div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="skills-type wow rotateIn" data-wow-delay="1.3s">
+                  <div class="skills-type__circle c4">
+                    <div class="mask-grey"></div>
+                    <div class="mask-blue"></div>
+                  </div>
+                  <div class="skills-type__text">JQuery / Sass</div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="skills-type wow rotateIn" data-wow-delay="1.6s">
+                  <div class="skills-type__circle c5">
+                    <div class="mask-grey"></div>
+                    <div class="mask-blue"></div>
+                  </div>
+                  <div class="skills-type__text">PHP / MySQL</div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-md-4 col-sm-6">
+                <div class="skills-type wow rotateIn" data-wow-delay="1.9s">
+                  <div class="skills-type__circle c6">
+                    <div class="mask-grey"></div>
+                    <div class="mask-blue"></div>
+                  </div>
+                  <div class="skills-type__text">Laravel</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End skill-->
+        <!-- Start works-->
+        <div class="works bg-color--grey u-area-padding" id="works">
+          <div class="container" id="app">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1 class="title wow bounceInUp">WORKS</h1>
+              </div>
+              <div class="col-md-6 col-sm-12 works-group" v-for="(work, id) in works_data">
+                <div class="work wow fadeInUp" @click="work_click(id)" :data-wow-delay="(id + 1) * 0.3 + 's'"><img class="work__cover" :src="work.url">
+                  <div class="work-info">
+                    <div class="work-info__title">{{work.title}}</div>
+                    <div class="work-info__content">{{work.content}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End works-->
+        <!-- Start contact-->
+        <div class="contact bg-color--white" id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="contact__title wow bounceInUp">CONTACT</div>
+                <hr>
+                <div class="contact__mail wow fadeInUp" data-wow-delay="0.3s"><a class="fa fa-envelope-o" href="mailto:klj40702@gmail.com"><span>klj40702@gmail.com</span></a></div>
+                <div class="contact__logo"><a class="fa fa-facebook-square wow rotateIn" href="https://fb.me/ke.di.54" target="_blank" data-wow-delay="0.4s"></a><a class="fa fa-github wow rotateIn" href="https://github.com/RD0916" target="_blank" data-wow-delay="0.7s"></a><a class="fa fa-linkedin-square wow rotateIn" href="linkedin.com/in/rd0916" target="_blank" data-wow-delay="1s"></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End contact-->
+      </section>
+      <!-- End main-->
+      <!-- Start footer-->
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="left-text">D</div>
+          <div class="right-text">
+            <div class="copyright">© 2017-2018 Dehao Kong. All rights reserved</div>
+          </div>
+        </div>
+      </footer>
+      <!-- End footer-->
+    </div>
+    <!-- Start vendor js-->
+    <script src="vendor/jQuery/jquery-2.2.4.min.js"></script>
+    <script src="vendor/vue/vue-2.3.4.min.js"></script>
+    <script src="vendor/owl-carousel/owl-carousel-2.2.1.min.js"></script>
+    <script src="vendor/wow/wow-1.1.2.min.js"></script>
+    <!-- End vendor js-->
+    <script src="js/index.js"></script>
+  </body>
+</html>
