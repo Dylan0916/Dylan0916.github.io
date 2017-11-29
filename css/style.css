@@ -252,15 +252,20 @@ hr {
   font-size: 26px;
   width: 55px;
   height: 55px;
+  line-height: 55px;
+  margin-right: 8px;
+  margin-left: 8px;
   background-color: #777;
   color: #eee;
   border-radius: 50%;
-  line-height: 55px;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s; }
   .box__icon:hover {
     background-color: #86A6DF; }
+  .box__icon.box__icon--height:before {
+    position: relative;
+    top: 2px; }
 
 /*-------------------------*/
 /* $Owlcarousel

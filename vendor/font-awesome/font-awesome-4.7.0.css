@@ -44,3 +44,6 @@
 .fa-linkedin-square:before {
   content: "\f08c";
 }
+.fa-link:before {
+    content: "\f0c1";
+}

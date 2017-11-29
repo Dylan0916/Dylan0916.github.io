@@ -46,6 +46,7 @@ html(lang='en', prefix='og: http://ogp.me/ns#')
                   h2.box__heading {{box.title}}
                   .box__text(v-html='box.description')
                   .box__icons
+                    a.box__icon.box__icon--height.fa.fa-link(target="_blank", :href="box.link", v-show="box.link")
                     i.box__icon.fa.fa-times(@click='close_box')
       // End work box
 

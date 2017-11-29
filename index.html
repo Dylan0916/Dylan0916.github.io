@@ -44,7 +44,7 @@
                 <div class="col-lg-8 push-lg-2">
                   <h2 class="box__heading">{{box.title}}</h2>
                   <div class="box__text" v-html="box.description"></div>
-                  <div class="box__icons"><i class="box__icon fa fa-times" @click="close_box"></i></div>
+                  <div class="box__icons"><a class="box__icon box__icon--height fa fa-link" target="_blank" :href="box.link" v-show="box.link"></a><i class="box__icon fa fa-times" @click="close_box"></i></div>
                 </div>
               </div>
             </div>
