@@ -161,7 +161,8 @@ let box_data = [
   {
     "img": ["ntunhs-usedbook-01.png", 'ntunhs-usedbook-02.png', 'ntunhs-usedbook-03.png', 'ntunhs-usedbook-04.png'],
     "title": "北護二手書交易平台",
-    'description': "<p>這是一個提供給北護師生收購需用貨販售不要的二手書的平台。</p><p>大學時曾製作一個簡易版的二手書平台，之後持續這個概念，利用 Laravel 框架來完成這網頁，網頁加上 RWD，讓使用者不管是 Desptop 或是 Mobile 都能舒適的瀏覽內容。</p>"
+    'description': "<p>這是一個提供給北護師生收購需用貨販售不要的二手書的平台。</p><p>大學時曾製作一個簡易版的二手書平台，之後持續這個概念，利用 Laravel 框架來完成這網頁，網頁加上 RWD，讓使用者不管是 Desptop 或是 Mobile 都能舒適的瀏覽內容。</p>",
+    "link": 'https://dehaokong.000webhostapp.com/ntunhs-usedbook/'
   },
   {
     "img": ['Tic-Tac-Toe-01.png', 'Tic-Tac-Toe-02.png', 'Tic-Tac-Toe-03.png'],
