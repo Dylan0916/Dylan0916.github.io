@@ -16,8 +16,6 @@
     <link rel="stylesheet prefetch" href="vendor/bootstrap/bootstrap-4.0.0.css">
     <link rel="stylesheet prefetch" href="vendor/font-awesome/font-awesome-4.7.0.css">
     <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Lobster|Bree+Serif|Lemonada|Montserrat:300,400,500,600,700,900">
-    <link rel="stylesheet prefetch" href="vendor/owl-carousel/owl-carousel-2.2.1.min.css">
-    <link rel="stylesheet prefetch" href="vendor/animate/animate-3.5.1.css">
     <!-- End vendor css-->
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -27,31 +25,6 @@
       <div class="bg"></div>
       <div class="goTop js-at_top"><i class="fa fa-chevron-up"></i></div>
       <!-- End element-->
-      <!-- Start work box-->
-      <div class="box" id="app2">
-        <div class="container">
-          <div class="box__cross" @click="close_box"></div>
-          <div class="box__inner" v-for="(box, id) in box_data" :id="'box_' + id">
-            <div class="owl-carousel owl-theme">
-              <div class="imgbox" v-for="box_img in box.img">
-                <div class="imgbox__inner" :class="(id == 0) ? 'imgbox__inner--7-6' : 'imgbox__inner--5-4'">
-                  <div class="image" :style="bg_css(box_img)"></div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="box__info">
-                <div class="col-lg-8 push-lg-2">
-                  <h2 class="box__heading">{{box.title}}</h2>
-                  <div class="box__text" v-html="box.description"></div>
-                  <div class="box__icons"><a class="box__icon box__icon--height fa fa-link" target="_blank" :href="box.link" v-show="box.link"></a><i class="box__icon fa fa-times" @click="close_box"></i></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End work box-->
       <!-- Start header-->
       <header class="header js-at_top">
         <div class="container">
@@ -270,7 +243,36 @@
         </div>
       </footer>
       <!-- End footer-->
+      <!-- Start work box-->
+      <div class="box" id="app2">
+        <div class="container">
+          <div class="box__cross" @click="close_box"></div>
+          <div class="box__inner" v-for="(box, id) in box_data" :id="'box_' + id">
+            <div class="owl-carousel owl-theme">
+              <div class="imgbox" v-for="box_img in box.img">
+                <div class="imgbox__inner" :class="(id == 0) ? 'imgbox__inner--7-6' : 'imgbox__inner--5-4'">
+                  <div class="image" :style="bg_css(box_img)"></div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="box__info">
+                <div class="col-lg-8 push-lg-2">
+                  <h2 class="box__heading">{{box.title}}</h2>
+                  <div class="box__text" v-html="box.description"></div>
+                  <div class="box__icons"><a class="box__icon box__icon--height fa fa-link" target="_blank" :href="box.link" v-show="box.link"></a><i class="box__icon fa fa-times" @click="close_box"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End work box-->
     </div>
+    <!-- Start vendor css-->
+    <link rel="stylesheet prefetch" href="vendor/owl-carousel/owl-carousel-2.2.1.min.css">
+    <link rel="stylesheet prefetch" href="vendor/animate/animate-3.5.1.css">
+    <!-- End vendor css-->
     <!-- Start vendor js-->
     <script src="vendor/jQuery/jquery-2.2.4.min.js"></script>
     <script src="vendor/vue/vue-2.3.4.min.js"></script>
@@ -278,5 +280,25 @@
     <script src="vendor/wow/wow-1.1.2.min.js"></script>
     <!-- End vendor js-->
     <script src="js/index.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics-->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-111303596-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-111303596-1');
+      
+    </script>
+    <!-- Hotjar Tracking Code for https://rd0916.github.io/-->
+    <script>
+      (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:723873,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
   </body>
 </html>
