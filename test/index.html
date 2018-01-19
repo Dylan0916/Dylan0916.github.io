@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
   </head>
   <body>
-    <form action="https://formspree.io/klj40702@gmail.com" method="POST">
-      <input type="hidden" name="_language" value="zh-TW">
-      <input type="text" name="name"><br>
-      <input type="email" name="_replyto" placeholder="Your email"><br>
-      <textarea name="content" cols="30" rows="10"></textarea>
-      <input type="submit" value="Send">
-    </form>
+    <div id="app">
+      <input class="test" type="text" v-model="txt" />
+      <br/>
+      <button @click="clk">Click</button>
+    </div>
   </body>
 </html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+
+<script>
+  console.clear();
+
+  const vm = new Vue({
+    // el: '#app',
+    data: {
+      txt: ''
+    },
+    methods: {
+      clk() {
+        return new Promise((resolve, reject) => {
+          let isReturn = false;
+          if (this.txt == '') {
+            this.error('.test');
+            isReturn = true
+          }
+
+          if (isReturn) {
+            return;
+          }
+        });
+      },
+      error(selector, msg = '', type = '') {
+        $(selector).addClass('red').focus();
+        if (msg) {
+
+        }
+      }
+    }
+  });
+
+  vm.$mount('#app');
+</script>
