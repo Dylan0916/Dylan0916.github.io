@@ -12,39 +12,12 @@
   </body>
 </html>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+<script src="./verybuy-criteo.min.js"></script>
 
 <script>
-  console.clear();
+  verybuy.criteoLoadJs()
+</script>
 
-  const vm = new Vue({
-    // el: '#app',
-    data: {
-      txt: ''
-    },
-    methods: {
-      clk() {
-        return new Promise((resolve, reject) => {
-          let isReturn = false;
-          if (this.txt == '') {
-            this.error('.test');
-            isReturn = true
-          }
-
-          if (isReturn) {
-            return;
-          }
-        });
-      },
-      error(selector, msg = '', type = '') {
-        $(selector).addClass('red').focus();
-        if (msg) {
-
-        }
-      }
-    }
-  });
-
-  vm.$mount('#app');
+<script>
+  
 </script>
