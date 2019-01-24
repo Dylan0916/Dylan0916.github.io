@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    .album-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .img-container {
+      flex: 0 0 calc(33% - 5px);
+    }
+
+    .img-container__img {
+      width: 100%;
+    }
+  </style>
+
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.283.1.min.js"></script>
+  <script src="./main.js"></script>
+
+  <script>
+    viewAlbum();
+  </script>
+
+<body>
+  <h1>E2E Screenshot.</h1>
+  <div id="app"></div>
+</body>
+
+</html>
