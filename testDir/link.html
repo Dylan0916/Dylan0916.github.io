@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,19 @@
     <style lang="">
     </style>
 </head>
+
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
 
-
-
+    <div id="msg"></div>
     <script>
-        var myMsg = function (e) {
-            console.log(e);
-        };
-        window.addEventListener("message", myMsg, false);//監聽message事件
+        window.onload = () => {
+            const msg = document.getElementById('msg');
+            console.log(document.referrer);
+            msg.innerText = JSON.stringify(document.referrer);
+        }
     </script>
 
 </body>
