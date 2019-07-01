@@ -18,11 +18,11 @@
 
     grecaptcha.ready(function () {
       console.log('1. grecaptcha.ready');
-      console.log('2. grecaptcha.execute("6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb", { action: "homepage" })');
+      console.log('2. grecaptcha.execute("6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb", { action: "login" })');
 
       grecaptcha
         .execute('6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb',
-          { action: 'homepage' }
+          { action: 'login' }
         )
         .then((token) => {
           console.log('3. Get token from reCAPTCHA service => ', token);
