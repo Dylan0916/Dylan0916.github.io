@@ -14,7 +14,7 @@
 
 <body>
   <form action="?" method="POST">
-    <div class="g-recaptcha" data-sitekey="6LfyaqsUAAAAAPUV581Ss-FuqLJKNbIHrbPl3o8u"></div>
+    <div class="g-recaptcha" data-sitekey="6LfyaqsUAAAAAPUV581Ss-FuqLJKNbIHrbPl3o8u" data-callback="callbackFunction"></div>
     <br />
     <input type="submit" value="Submit">
   </form>
@@ -24,8 +24,14 @@
     console.clear();
 
     var onloadCallback = function () {
+      console.log(arguments)
       console.log("grecaptcha is ready!");
     };
+
+    var callbackFunction = function() {
+      console.log('==========')
+      console.log(arguments)
+    }
 
   </script>
 
