@@ -10,8 +10,6 @@
       padding-left: 15px;
     }
   </style>
-
-  <script src="https://www.google.com/recaptcha/api.js?render=6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb"></script>
 </head>
 <body>
   <ol>
@@ -53,28 +51,7 @@
   </ol>
 
   <script>
-    console.log(grecaptcha)
-
-    grecaptcha.ready(function () {
-      console.log('1. grecaptcha.ready');
-      console.log('2. grecaptcha.execute("6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb", { action: "@Url.Action("VerifyBot", "Account")" })');
-      grecaptcha
-        .execute('6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb',
-          { action: '@Url.Action("VerifyBot", "Account")' }
-        )
-        .then((token) => {
-          console.log('3. Get token from reCAPTCHA service => ', token);
-          console.log('4. Verifying Bot...');
-          $.ajax({
-            type: 'POST',
-            url: '@Url.Action("VerifyBot", "Account")',
-            data: { token: token },
-            success: (res) => {
-              console.log('5. Return => ', res);
-            }
-          });
-        });
-    });
+    console.log(grecaptcha);
   </script>
 </body>
 </html>
