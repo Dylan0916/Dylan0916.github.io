@@ -18,22 +18,23 @@
 
     grecaptcha.ready(function () {
       console.log('1. grecaptcha.ready');
-      console.log('2. grecaptcha.execute("6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb", { action: "@Url.Action("VerifyBot", "Account")" })');
+      console.log('2. grecaptcha.execute("6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb", { action: "homepage" })');
+
       grecaptcha
         .execute('6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb',
-          { action: '@Url.Action("VerifyBot", "Account")' }
+          { action: 'homepage' }
         )
         .then((token) => {
           console.log('3. Get token from reCAPTCHA service => ', token);
           console.log('4. Verifying Bot...');
-          $.ajax({
-            type: 'POST',
-            url: '@Url.Action("VerifyBot", "Account")',
-            data: { token: token },
-            success: (res) => {
-              console.log('5. Return => ', res);
-            }
-          });
+          // $.ajax({
+          //   type: 'POST',
+          //   url: '@Url.Action("VerifyBot", "Account")',
+          //   data: { token: token },
+          //   success: (res) => {
+          //     console.log('5. Return => ', res);
+          //   }
+          // });
         });
     });
   </script>
