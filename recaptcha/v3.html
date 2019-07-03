@@ -14,19 +14,20 @@
 
 <body>
   <script>
-    const key = '6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb'
+    const siteKey = '6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb'
+    const action = 'login'
 
     function getToken() {
       return new Promise(resolve => {
         grecaptcha
-          .execute(key, { action: 'login' })
+          .execute(siteKey, { action })
           .then(token => resolve(token));
       })
     }
 
     grecaptcha.ready(function () {
       console.log('1. grecaptcha.ready');
-      console.log(`2. grecaptcha.execute("${key}", { action: "login" })`);
+      console.log(`2. grecaptcha.execute("${siteKey}", { action: "${action}" })`);
 
       getToken().then(token => {
         console.log('3. Get token from reCAPTCHA service => ', token);
