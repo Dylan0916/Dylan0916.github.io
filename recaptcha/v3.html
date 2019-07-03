@@ -14,28 +14,23 @@
 
 <body>
   <script>
-    console.log(grecaptcha)
+    const key = '6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb'
+
+    function getToken() {
+      return new Promise(resolve => {
+        grecaptcha
+          .execute(key, { action: 'login' })
+          .then(token => resolve(token));
+      })
+    }
 
     grecaptcha.ready(function () {
       console.log('1. grecaptcha.ready');
-      console.log('2. grecaptcha.execute("6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb", { action: "login" })');
+      console.log(`2. grecaptcha.execute("${key}", { action: "login" })`);
 
-      grecaptcha
-        .execute('6LcLbqsUAAAAAP39B4A_VZjsQVrjHK7QgLEYVMsb',
-          { action: 'login' }
-        )
-        .then((token) => {
-          console.log('3. Get token from reCAPTCHA service => ', token);
-          console.log('4. Verifying Bot...');
-          // $.ajax({
-          //   type: 'POST',
-          //   url: '@Url.Action("VerifyBot", "Account")',
-          //   data: { token: token },
-          //   success: (res) => {
-          //     console.log('5. Return => ', res);
-          //   }
-          // });
-        });
+      getToken().then(token => {
+        console.log('3. Get token from reCAPTCHA service => ', token);
+      });
     });
   </script>
 </body>
