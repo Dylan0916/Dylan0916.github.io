@@ -27,7 +27,7 @@ const displayList = [
   },
   {
     title: "搜尋：連衣裙",
-    url: `${url}/search/user_submi/%E9%80%A3%E8%A1%A3%E8%A3%99`,
+    url: `${url}/search/user_submit/%E9%80%A3%E8%A1%A3%E8%A3%99`,
     text: "search list",
   },
   {
@@ -37,7 +37,7 @@ const displayList = [
   },
   {
     title: "搜尋：竹節棉 (with utm)",
-    url: `${url}/search/user_submi/%E7%AB%B9%E7%AF%80%E6%A3%89/top/4374096?utm_source=line&utm_medium=message&utm_campaign=mgm&utm_term=20200326`,
+    url: `${url}/search/user_submit/%E7%AB%B9%E7%AF%80%E6%A3%89/top/4374096?utm_source=line&utm_medium=message&utm_campaign=mgm&utm_term=20200326`,
     text: "search list",
   },
   {
