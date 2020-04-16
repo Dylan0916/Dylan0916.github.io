@@ -57,7 +57,7 @@ const displayList = [
   },
   {
     title: "Top",
-    url: `${url}/search/user_submit/%E7%89%9B%E4%BB%94/to/75003-74879-74882-73987-70527-68893-71284?utm_source=line&utm_medium=message&utm_campaign=regularWed&utm_content=image&utm_term=20190717&openExternalBrowser=1`,
+    url: `${url}/search/user_submit/%E7%89%9B%E4%BB%94/top/75003-74879-74882-73987-70527-68893-71284?utm_source=line&utm_medium=message&utm_campaign=regularWed&utm_content=image&utm_term=20190717&openExternalBrowser=1`,
     text: "Top",
   },
   {
