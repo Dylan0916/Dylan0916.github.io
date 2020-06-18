@@ -41,6 +41,11 @@ const displayList = [
     text: "search list",
   },
   {
+    title: "購物車",
+    url: `${url}/member/cart`,
+    text: "購物車",
+  },
+  {
     title: "user_submit item 短網址",
     url: `https://bit.ly/2K1gjfA`,
     text: "https://bit.ly/2K1gjfA",
