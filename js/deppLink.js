@@ -1,6 +1,6 @@
 const ol = document.getElementById("ol");
 const urlSearchParams = new URLSearchParams(location.search);
-let url = "https://sa.ssl.verybuy.tw";
+let url = "https://sa.www.verybuy.io";
 
 switch (urlSearchParams.get("env")) {
   case "prod":
