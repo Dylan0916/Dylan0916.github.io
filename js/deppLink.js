@@ -41,6 +41,11 @@ const displayList = [
     text: "search list",
   },
   {
+    title: "搜尋：竹節棉 (with filter)",
+    url: `${url}/search/user_submit/%E7%AB%B9%E7%AF%80%E6%A3%89/top/4374096?isHistoryWordApplied=true&maxPrice=1500&minPrice=1000&sortBy=updated_at&sortName=每週熱門#8cad6f0ee5f062ed70ac263e102334b6`,
+    text: "search list",
+  },
+  {
     title: "購物車",
     url: `${url}/member/cart`,
     text: "購物車",
