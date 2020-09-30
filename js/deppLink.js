@@ -51,6 +51,11 @@ const displayList = [
     text: "購物車",
   },
   {
+    title: "活動專區頁",
+    url: `${url}/member/event`,
+    text: "活動專區頁",
+  },
+  {
     title: "user_submit item 短網址",
     url: `https://bit.ly/2K1gjfA`,
     text: "https://bit.ly/2K1gjfA",
