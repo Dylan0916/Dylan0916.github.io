@@ -10,8 +10,14 @@
       padding-left: 15px;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
+  <div id="vm">
+    <span>新增一個連結：</span>
+    <input type="text" v-model="link" />
+    <a :href="link">{{link}}</a>
+  </div>
   <ol id="ol"></ol>
 
   <script src="./js/deppLink.js"></script>

@@ -103,3 +103,10 @@ const htmlContent = displayList.map(
 );
 
 ol.innerHTML = htmlContent.join("");
+
+new Vue({
+  el: "#vm",
+  data: {
+    link: "",
+  },
+});
